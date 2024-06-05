@@ -1,11 +1,5 @@
 // pages/gallery/[slug]/page.js
 import Gallery from "../Gallery";
-
-export default function GalleryCategoryPage({ params }) {
-    const { params: category } = params; 
-    return <Gallery category={category} />;
-}
-
 export async function generateStaticParams() {
     const categories = [
       { name: 'All', slug: 'all' },
@@ -16,6 +10,11 @@ export async function generateStaticParams() {
     ];
   
     return categories.map((category) => ({
-      params: { category: category.slug },
+      params: category.slug, 
     }));
   }
+export default function GalleryCategoryPage({ params }) {
+    const { params: category } = params; 
+    return <Gallery category={category} />;
+}
+
