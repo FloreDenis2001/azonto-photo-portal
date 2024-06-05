@@ -1,11 +1,11 @@
 "use client"
 import React, { useState } from 'react';
-import image1 from '@/assets/backgroundsSelected/background1.jpg'
-import image2 from '@/assets/backgroundsSelected/background2.jpg'
-import image3 from '@/assets/backgroundsSelected/background3.jpg'
-import image4 from '@/assets/backgroundsSelected/background4.jpg'
+import image1 from '../../assets/backgroundsSelected/background1.jpg'
+import image2 from '../..//assets/backgroundsSelected/background2.jpg'
+import image3 from '../../assets/backgroundsSelected/background3.jpg'
+import image4 from '../../assets/backgroundsSelected/background4.jpg'
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../components/ui/button';
 import Link from 'next/link';
 const CarouselHero2 = () => {
     const [activeIndex, setActiveIndex] = useState(0);
