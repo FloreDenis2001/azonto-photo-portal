@@ -54,8 +54,7 @@ export default function RecentWork() {
                                     src={image}
                                     alt={`img-${index}`}
                                     className="absolute inset-0 h-full w-full object-cover transition-opacity opacity-100 hover:opacity-75"
-                                    priority
-                                    loading='lazy'
+                                    priority={true}
                                 />
                             </div>
                         </div>

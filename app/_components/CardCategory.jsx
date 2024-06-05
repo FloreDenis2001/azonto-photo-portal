@@ -4,20 +4,20 @@ import { Button } from '../../components/ui/button';
 import Link from 'next/link';
 const CardCategory = ({ image1, image2, title, description }) => {
     return (
-        <div  className="group relative block">
+        <div className="group relative block">
             <div className="relative h-[350px] sm:h-[450px]">
                 <Image
                     src={image1}
                     alt="img-1"
                     className="absolute inset-0 h-full w-full object-cover transition-opacity opacity-100 group-hover:opacity-0"
-                    priority
-                    loading='lazy'
+                    priority={true}
                 />
 
                 <Image
                     src={image2}
                     alt="img-2"
                     className="absolute inset-0 h-full w-full object-cover transition-opacity opacity-0 group-hover:opacity-100"
+                    priority={true}
                 />
             </div >
 
