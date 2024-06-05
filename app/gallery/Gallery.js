@@ -109,7 +109,6 @@ export default function Gallery({ category }) {
                             priority={true}
                             alt={`img-${index}`}
                             className="object-cover h-full p-1 cursor-pointer opacity-0"
-                            onLoadingComplete={(e) => e.target.classList.remove("opacity-0")}
                         />
                     </div>
                 ))}
