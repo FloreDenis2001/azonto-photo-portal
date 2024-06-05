@@ -108,7 +108,7 @@ export default function Gallery({ category }) {
                             src={image}
                             priority={true}
                             alt={`img-${index}`}
-                            className="object-cover h-full p-1 cursor-pointer opacity-0"
+                            className="object-cover h-full p-1 cursor-pointer"
                         />
                     </div>
                 ))}
