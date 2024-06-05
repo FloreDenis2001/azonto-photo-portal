@@ -5,18 +5,17 @@ import { Button } from '../../components/ui/button';
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import ModalImage from './ModalImage'; 
-
-import image1 from '@/assets/backgroundsSelected/background3.jpg';
-import image2 from '@/assets/backgroundsSelected/background4.jpg';
-import image4 from '@/assets/recentwork/recent1.jpg';
-import image5 from '@/assets/recentwork/recent2.jpg';
-import image6 from '@/assets/recentwork/recent3.jpg';
-import image7 from '@/assets/recentwork/recent4.jpg';
-import image8 from '@/assets/recentwork/recent5.jpg';
-import image9 from '@/assets/recentwork/recent6.jpg';
-import image10 from '@/assets/recentwork/recent7.jpg';
-import image11 from '@/assets/recentwork/recent8.jpg';
-import image13 from '@/assets/recentwork/recent10.jpg';
+import image1 from '../../assets/backgroundsSelected/background3.jpg';
+import image2 from '../../assets/backgroundsSelected/background4.jpg';
+import image4 from '../../assets/recentwork/recent1.jpg';
+import image5 from '../../assets/recentwork/recent2.jpg';
+import image6 from '../../assets/recentwork/recent3.jpg';
+import image7 from '../../assets/recentwork/recent4.jpg';
+import image8 from '../../assets/recentwork/recent5.jpg';
+import image9 from '../../assets/recentwork/recent6.jpg';
+import image10 from '../../assets/recentwork/recent7.jpg';
+import image11 from '../../assets/recentwork/recent8.jpg';
+import image13 from '../../assets/recentwork/recent10.jpg';
 
 export default function RecentWork() {
     const images = [image1, image2, image4, image5, image6, image7, image8, image9, image10, image11, image13];
