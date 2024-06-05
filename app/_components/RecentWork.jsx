@@ -5,8 +5,10 @@ import { Button } from '../../components/ui/button';
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import ModalImage from './ModalImage'; 
+
 import image1 from '../../assets/backgroundsSelected/background3.jpg';
 import image2 from '../../assets/backgroundsSelected/background4.jpg';
+
 import image4 from '../../assets/recentwork/recent1.jpg';
 import image5 from '../../assets/recentwork/recent2.jpg';
 import image6 from '../../assets/recentwork/recent3.jpg';
