@@ -8,7 +8,9 @@ const Footer = () => {
         <footer className="bg-neutral-900 pb-20">
             <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="flex justify-center text-teal-600">
-                    <Image src={logo} alt="logo-avatar" className='w-32 h-32' />
+                    <Image src={logo} alt="logo-avatar" className='w-32 h-32'
+                        priority
+                        loading='lazy' />
                 </div>
 
                 <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button } from '../../components/ui/button';
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link';
-import ModalImage from './ModalImage'; 
+import ModalImage from './ModalImage';
 
 import image1 from '../../assets/backgroundsSelected/background3.jpg';
 import image2 from '../../assets/backgroundsSelected/background4.jpg';
@@ -54,6 +54,8 @@ export default function RecentWork() {
                                     src={image}
                                     alt={`img-${index}`}
                                     className="absolute inset-0 h-full w-full object-cover transition-opacity opacity-100 hover:opacity-75"
+                                    priority
+                                    loading='lazy'
                                 />
                             </div>
                         </div>

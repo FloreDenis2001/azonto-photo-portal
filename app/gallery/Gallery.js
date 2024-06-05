@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowBigUp } from 'lucide-react';
-import Modal from '../_components/ModalImage';  
+import Modal from '../_components/ModalImage';
 
 const categories = [
     { name: 'All', slug: 'all', max: 100 },
@@ -61,7 +61,7 @@ export default function Gallery({ category }) {
         }
         return array;
     };
-    
+
 
     useEffect(() => {
         window.addEventListener('scroll', checkScrollTop);
@@ -106,9 +106,11 @@ export default function Gallery({ category }) {
                     <div className='w-full md:w-1/2 lg:w-1/3' key={index} onClick={() => openImage(index)}>
                         <Image
                             src={image}
-                            priority={true}
+                            priority
+                            loading='lazy'
                             alt={`img-${index}`}
-                            className="object-cover h-full p-1 cursor-pointer"
+                            className="object-cover h-full p-1 cursor-pointer opacity-0"
+                            onLoadingComplete={(e) => e.target.classList.remove("opacity-0")}
                         />
                     </div>
                 ))}

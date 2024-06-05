@@ -1,4 +1,3 @@
-// pages/gallery/[slug]/page.js
 import Gallery from "../Gallery";
 export async function generateStaticParams() {
     const categories = [

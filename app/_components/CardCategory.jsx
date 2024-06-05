@@ -10,6 +10,8 @@ const CardCategory = ({ image1, image2, title, description }) => {
                     src={image1}
                     alt="img-1"
                     className="absolute inset-0 h-full w-full object-cover transition-opacity opacity-100 group-hover:opacity-0"
+                    priority
+                    loading='lazy'
                 />
 
                 <Image

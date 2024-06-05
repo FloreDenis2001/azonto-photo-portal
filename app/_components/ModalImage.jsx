@@ -12,6 +12,8 @@ export default function ModalImage({ image, onClose ,onPrev, onNext}) {
                     src={image}
                     alt="Selected"
                     className="max-w-full h-[100vh] object-contain cursor-pointer"
+                    priority
+                    loading='lazy'
                 />
             </div>
             <CircleX onClick={onClose} className='absolute top-8 right-8 text-orange-500 z-40' />

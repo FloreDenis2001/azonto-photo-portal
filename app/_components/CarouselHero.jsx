@@ -30,9 +30,9 @@ const CarouselHero2 = () => {
             label: 'Emotii in cadre, Povesti Neimblanzite.',
             description: 'Povesti spuse prin imagini, unde fiecare zambet si fiecare lacrima prind viata.'
         }
-        
+
     ];
-    
+
 
     const handlePrev = () => {
         setActiveIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
@@ -49,7 +49,7 @@ const CarouselHero2 = () => {
             data-twe-carousel-init
             data-twe-carousel-slide>
             <div
-                className="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0 " 
+                className="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0 "
                 data-twe-carousel-indicators>
                 {slides.map((_, index) => (
                     <button
@@ -77,7 +77,9 @@ const CarouselHero2 = () => {
                             <Image
                                 src={slide.src}
                                 alt="slide"
-                                className="block w-full h-[50vh] md:h-[60vh] lg:h-[90vh]" />
+                                className="block w-full h-[50vh] md:h-[60vh] lg:h-[90vh]"
+                                priority
+                                loading='lazy' />
                             <div
                                 className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-55"></div>
                         </div>
@@ -89,9 +91,9 @@ const CarouselHero2 = () => {
                             </p>
 
                             <Button className="mt-4 w-32  font-manrope text-white bg-orange-400 hover:scale-90 hover:bg-orange-400 transition-all ease-in-out  uppercase tracking-wider ">
-                               <Link href="/gallery/all">
-                                 Galerie
-                               </Link>
+                                <Link href="/gallery/all">
+                                    Galerie
+                                </Link>
                             </Button>
                         </div>
                     </div>
