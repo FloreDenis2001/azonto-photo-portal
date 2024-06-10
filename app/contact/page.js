@@ -67,15 +67,15 @@ export default function Contact() {
 
                 <div className="w-full lg:-mt-96 lg:w-2/6 px-8 py-12 ml-auto bg-orange-500 rounded-2xl">
                     <div className="flex flex-col text-white">
-                        <h1 className="font-bold uppercase text-4xl my-4">Vizitează-ne la studio</h1>
+                        <h1 className="font-bold uppercase text-4xl my-4">Contactează-ne</h1>
                         <p className="text-gray-300">
-                            Te așteptăm cu drag la studioul nostru pentru a discuta despre cum putem imortaliza cele mai frumoase momente din viața ta. Fie că este vorba de portrete, evenimente speciale sau sesiuni foto creative, echipa noastră este pregătită să îți ofere servicii profesionale într-un mediu plăcut și relaxant.
+                            Te așteptăm cu drag 
+                             pentru a discuta despre cum putem imortaliza cele mai frumoase momente din viața ta. Fie că este vorba de portrete, evenimente speciale sau sesiuni foto creative, echipa noastră este pregătită să îți ofere servicii profesionale într-un mediu plăcut și relaxant.
                         </p>
                         <div className="flex my-4 w-2/3 lg:w-full">
                             <div className="flex flex-col">
-                                <h2 className="text-2xl">Contactează-ne</h2>
-                                <p className="text-gray-300">Tel: +40 754 179 369</p>
-                                <p className="text-gray-300">Email: cojo190875@yahoo.com</p>
+                                <p className=" font-bold  text-gray-300">Tel: +40 754 179 369</p>
+                                <p className="font-bold  text-gray-300">Email: cojo190875@yahoo.com</p>
                             </div>
                         </div>
                         <div className="flex my-4 w-2/3 lg:w-1/2 gap-4">

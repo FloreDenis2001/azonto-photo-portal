@@ -41,7 +41,7 @@ export default function RecentWork() {
     return (
         <section className="w-full py-8 grid">
             <h2 className='mx-4 mt-8 md:text-4xl md:w-4/5 font-bold text-white text-2xl tracking-wider pb-2 border-b border-orange-500 font-manrope'>
-                Ultimele proiecte
+                Portofoliu
             </h2>
 
             <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
