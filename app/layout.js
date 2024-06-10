@@ -2,6 +2,7 @@ import { Outfit } from "next/font/google";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import MobileNavigation from "./_components/MobileNavigation";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"] });
