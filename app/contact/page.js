@@ -1,31 +1,61 @@
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+            .then((response) => {
+                console.log('Email sent successfully:', response);
+                toast.success('Mesajul a fost trimis cu succes!');
+            })
+            .catch((error) => {
+                console.error('Email sending failed:', error);
+                toast.error('Trimiterea mesajului a eșuat.');
+            });
+    };
     return (
         <div className="flex justify-center items-center  pt-20 bg-neutral-900">
             <div className="container mx-auto my-4 px-4 lg:px-20">
-                <div className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
-                    <div className="flex">
-                        <h1 className="pt-10 font-bold font-manrope uppercase text-5xl text-white">Trimite un <br /> <span className="text-orange-500">mesaj</span> </h1>
-                    </div>
+            <div className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
+                <div className="flex">
+                    <h1 className="pt-10 font-bold font-manrope uppercase text-5xl text-white">Trimite un <br /> <span className="text-orange-500">mesaj</span> </h1>
+                </div>
+                <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5 font-manrope">
                         <input className="w-full bg-neutral-800 text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" placeholder="First Name*" />
+                            type="text" placeholder="First Name*" name="firstName" value={formData.firstName} onChange={handleChange} />
                         <input className="w-full bg-neutral-800 text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" placeholder="Last Name*" />
+                            type="text" placeholder="Last Name*" name="lastName" value={formData.lastName} onChange={handleChange} />
                         <input className="w-full bg-neutral-800 text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="email" placeholder="Email*" />
+                            type="email" placeholder="Email*" name="email" value={formData.email} onChange={handleChange} />
                         <input className="w-full bg-neutral-800 text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="number" placeholder="Phone*" />
+                            type="number" placeholder="Phone*" name="phone" value={formData.phone} onChange={handleChange} />
                     </div>
                     <div className="my-4">
-                        <textarea placeholder="Message*" className="font-manrope w-full h-32 bg-neutral-800 text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                        <textarea placeholder="Message*" className="font-manrope w-full h-32 bg-neutral-800 text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="message" value={formData.message} onChange={handleChange}></textarea>
                     </div>
                     <div className="my-2 w-1/2 lg:w-1/4">
-                        <button className="uppercase text-sm font-bold tracking-wide bg-orange-500 text-gray-100 p-3 rounded-lg w-full 
-                      focus:outline-none focus:shadow-outline">
+                        <button type="submit" className="uppercase text-sm font-bold tracking-wide bg-orange-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                             Send Message
                         </button>
                     </div>
-                </div>
+                </form>
+            </div>
 
                 <div className="w-full lg:-mt-96 lg:w-2/6 px-8 py-12 ml-auto bg-orange-500 rounded-2xl">
                     <div className="flex flex-col text-white">
@@ -33,17 +63,11 @@ export default function Contact() {
                         <p className="text-gray-300">
                             Te așteptăm cu drag la studioul nostru pentru a discuta despre cum putem imortaliza cele mai frumoase momente din viața ta. Fie că este vorba de portrete, evenimente speciale sau sesiuni foto creative, echipa noastră este pregătită să îți ofere servicii profesionale într-un mediu plăcut și relaxant.
                         </p>
-                        <div className="flex my-4 w-2/3 lg:w-1/2">
-                            <div className="flex flex-col">
-                                <h2 className="text-2xl">Sediul nostru</h2>
-                                <p className="text-gray-300">Strada Frumoasă 123, București, România</p>
-                            </div>
-                        </div>
                         <div className="flex my-4 w-2/3 lg:w-full">
                             <div className="flex flex-col">
                                 <h2 className="text-2xl">Contactează-ne</h2>
-                                <p className="text-gray-300">Tel: 123-456-789</p>
-                                <p className="text-gray-300">Email: contact@fotostudio.ro</p>
+                                <p className="text-gray-300">Tel: +40 754 179 369</p>
+                                <p className="text-gray-300">Email: cojo190875@yahoo.com</p>
                             </div>
                         </div>
                         <div className="flex my-4 w-2/3 lg:w-1/2 gap-4">

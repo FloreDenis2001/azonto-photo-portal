@@ -78,7 +78,7 @@ const CarouselHero2 = () => {
                                 src={slide.src}
                                 alt="slide"
                                 className="block w-full h-[50vh] md:h-[60vh] lg:h-[90vh]"
-                                priority={index === 0}
+                                priority={index < 4}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 objectFit="cover"
                             />

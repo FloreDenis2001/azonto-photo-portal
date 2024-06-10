@@ -52,7 +52,7 @@ export default function RecentWork() {
                                 src={image}
                                 alt={`img-${index}`}
                                 className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ease-in-out opacity-100 hover:opacity-75"
-                                priority={index < 2} 
+                                priority={index < 4} 
                                 layout="fill"
                                 sizes="(max-width: 600px) 100vw, (max-width: 768px) 50vw, 33vw"
                             />
