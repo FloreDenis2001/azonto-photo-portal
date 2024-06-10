@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '../../components/ui/button';
@@ -8,7 +8,6 @@ import ModalImage from './ModalImage';
 
 import image1 from '../../assets/backgroundsSelected/background3.jpg';
 import image2 from '../../assets/backgroundsSelected/background4.jpg';
-
 import image4 from '../../assets/recentwork/recent1.jpg';
 import image5 from '../../assets/recentwork/recent2.jpg';
 import image6 from '../../assets/recentwork/recent3.jpg';
@@ -46,20 +45,20 @@ export default function RecentWork() {
             </h2>
 
             <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-                {
-                    images.map((image, index) => (
-                        <div key={index} className="relative" onClick={() => openImage(index)}>
-                            <div className="relative h-[350px] sm:h-[450px] cursor-pointer">
-                                <Image
-                                    src={image}
-                                    alt={`img-${index}`}
-                                    className="absolute inset-0 h-full w-full object-cover transition-opacity opacity-100 hover:opacity-75"
-                                    priority={true}
-                                />
-                            </div>
+                {images.map((image, index) => (
+                    <div key={index} className="relative" onClick={() => openImage(index)}>
+                        <div className="relative h-[250px] sm:h-[350px] md:h-[450px] cursor-pointer">
+                            <Image
+                                src={image}
+                                alt={`img-${index}`}
+                                className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ease-in-out opacity-100 hover:opacity-75"
+                                priority={index < 2} 
+                                layout="fill"
+                                sizes="(max-width: 600px) 100vw, (max-width: 768px) 50vw, 33vw"
+                            />
                         </div>
-                    ))
-                }
+                    </div>
+                ))}
             </div>
 
             <Link href="/gallery/all" className='w-full flex flex-row items-center justify-center'>

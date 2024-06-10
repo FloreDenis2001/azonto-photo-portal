@@ -11,7 +11,7 @@ const Header = () => {
         <header className="absolute z-10 flex flex-row items-center justify-between w-full md:h-32 h-20 px-4 py-2 gap-2 max-w-[1275px] ">
 
             <Image src={logo} alt="logo-avatar" className="w-20 h-20 md:w-32 md:h-32" priority
-                    loading='lazy' />
+                     />
             <ul className="md:flex flex-row gap-6 0 w-1/3 justify-around hidden text-white uppercase text-md">
                 <li className="text-white hover:text-orange-500 transition ease-in-out">
                     <Link href="/">

@@ -40,7 +40,7 @@ const About = () => {
                     <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                         <div className="relative flex flex-col min-w-0 break-words  w-full mb-2 shadow-lg rounded-lg bg-orange-500">
                             <Image className="w-full align-middle rounded-t-lg h-72" src={image} alt="icon" priority
-                    loading='lazy' />
+                    />
                             <blockquote className="relative p-8 mb-4">
 
                                 <h4 className="text-xl font-bold text-white">
